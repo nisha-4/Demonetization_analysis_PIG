@@ -1,0 +1,11 @@
+PySpark will be used for parallel processing and distributed computing to handle the large volume of data.The preprocessed data will be analyzed using Hadoop, Pig, and PySpark. MapReduce jobs and DataFrame operations will be used to process large datasets and extract relevant information such as user sentiments, the frequency of certain terms, and the overall tone of tweets. The analysis will identify positive, negative, and neutral sentiments towards demonetization and help in understanding the public opinion towards the economic event.
+
+MapReduce is a programming paradigm used for processing large datasets in a parallel and distributed manner. PySpark, the Python API for Apache Spark, is built on top of the Spark framework and provides an interface for implementing MapReduce operations using Python code.
+
+In PySpark, MapReduce operations are typically performed in two stages: Map and Reduce.
+
+The Map stage takes a set of input data and applies a transformation function to each element in parallel. This function can be user-defined and can perform any operation on the input data, such as filtering, grouping, or aggregation. The output of the Map stage is a set of key-value pairs.
+
+The Reduce stage takes the output from the Map stage and combines the values for each key in parallel. The Reduce function is also user-defined and can perform any operation on the values, such as summing, counting, or averaging. The output of the Reduce stage is a set of aggregated key-value pairs.
+
+we first create a Spark context using the SparkContext class. We then create an RDD (Resilient Distributed Dataset) of integers using the parallelize method. Next, we define the Map and Reduce functions using Python code. The Map function squares each element in the input data and returns a key-value pair with the element as the key and the squared value as the value. The Reduce function sums the values for each key. We then apply the MapReduce operation to the RDD using the map and reduceByKey methods. Finally, we print the result using the collect method, which returns a list of all the elements in the RDD.
